@@ -1,0 +1,62 @@
+name: Incident de production
+description: Consigner un incident (suivi des incidents du référentiel des risques)
+title: '[Incident] '
+labels: [incident]
+body:
+  - type: input
+    id: date
+    attributes:
+      label: Date et heure de détection
+      placeholder: 2027-03-14 21:05
+    validations:
+      required: true
+  - type: dropdown
+    id: source
+    attributes:
+      label: Source de détection
+      options:
+        - Alerte Sentry
+        - Sonde de disponibilité
+        - Signalement utilisateur
+        - Revue des indicateurs
+    validations:
+      required: true
+  - type: dropdown
+    id: severity
+    attributes:
+      label: Gravité
+      options:
+        - P1 – prise en charge sous 4 h
+        - P2
+        - P3
+        - P4
+    validations:
+      required: true
+  - type: dropdown
+    id: risk
+    attributes:
+      label: Risque du référentiel concerné
+      options:
+        - R-01 IDOR
+        - R-02 Injection SQL ou XSS
+        - R-03 Compromission de compte
+        - R-04 Doublons ou faux doublons
+        - R-05 Format CSV non reconnu
+        - R-06 Perte de données
+        - R-07 Interruption du service
+        - R-08 Dégradation des performances
+        - R-09 Dépendance vulnérable
+        - R-10 Non-conformité RGPD
+        - Autre
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact
+      description: Utilisateurs touchés, données concernées, durée
+    validations:
+      required: true
+  - type: textarea
+    id: resolution
+    attributes:
+      label: Résolution et retour d'expérience
+      description: Correctif, pull request liée, mesures pour éviter la récidive

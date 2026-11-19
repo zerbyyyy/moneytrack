@@ -1,0 +1,61 @@
+/* Styles de base : contrastes conformes RGAA (ratio ≥ 4,5:1), focus toujours visible. */
+:root {
+  --color-text: #1a1a1a;
+  --color-muted: #4a4a4a;
+  --color-bg: #ffffff;
+  --color-accent: #1b5e9e;
+  font-family: system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.5;
+  color: var(--color-text);
+  background: var(--color-bg);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.skip-link {
+  position: absolute;
+  left: 1rem;
+  top: -3rem;
+  padding: 0.5rem 1rem;
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+.skip-link:focus {
+  top: 1rem;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 2px;
+}
+
+.site-header {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid #d0d0d0;
+}
+
+.logo {
+  margin: 0;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+main {
+  max-width: 48rem;
+  margin: 0 auto;
+  padding: 2rem 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}

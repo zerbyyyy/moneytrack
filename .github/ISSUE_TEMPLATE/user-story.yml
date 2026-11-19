@@ -1,0 +1,40 @@
+name: User story
+description: Nouvelle fonctionnalité du backlog
+title: '[US] '
+labels: [user-story]
+body:
+  - type: input
+    id: ref
+    attributes:
+      label: Référence
+      placeholder: US-04
+  - type: textarea
+    id: story
+    attributes:
+      label: User story
+      value: |
+        En tant qu'utilisateur,
+        je souhaite …
+        afin de …
+    validations:
+      required: true
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Critères d'acceptation
+      placeholder: |
+        - [ ] …
+        - [ ] Accessible au clavier et au lecteur d'écran
+    validations:
+      required: true
+  - type: dropdown
+    id: moscow
+    attributes:
+      label: Priorité MoSCoW
+      options: [Must have, Should have, Could have, Won't have]
+    validations:
+      required: true
+  - type: input
+    id: estimate
+    attributes:
+      label: Estimation (jours-hommes)
