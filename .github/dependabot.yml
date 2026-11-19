@@ -14,6 +14,10 @@ updates:
       production-dependencies:
         dependency-type: production
         update-types: [minor, patch]
+    # Les versions majeures (breaking changes) sont migrées manuellement, pas via Dependabot.
+    ignore:
+      - dependency-name: '*'
+        update-types: ['version-update:semver-major']
 
   - package-ecosystem: github-actions
     directory: /
