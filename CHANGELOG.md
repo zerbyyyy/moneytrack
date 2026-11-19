@@ -14,3 +14,8 @@ Format inspiré de [Keep a Changelog](https://keepachangelog.com/fr/1.1.0/), ver
 - Page d'accueil accessible indiquant l'état de l'API.
 - Docker Compose (Nginx, API, PostgreSQL 16) et configuration Nginx avec en-têtes de sécurité.
 - Intégration continue GitHub Actions, analyse CodeQL, Dependabot, modèles de tickets et de pull request.
+- Limitation globale du débit des requêtes sur l'API.
+
+### Sécurité
+
+- Passage à Zod 4.6.7 et à `deepmerge-ts` 8 (sous-dépendance de Prisma) pour corriger 4 vulnérabilités de sévérité élevée signalées par `npm audit`.

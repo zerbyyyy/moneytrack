@@ -1,0 +1,7 @@
+name: Configuration CodeQL MoneyTrack
+
+# Les fichiers de test montent de petites applications Express sans protection
+# de production : ils sont exclus de l'analyse de sécurité.
+paths-ignore:
+  - '**/*.test.ts'
+  - '**/*.test.tsx'
